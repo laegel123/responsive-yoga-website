@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*コンフリクト起きないために後で消そう*/
+body{
+    background-color: #F5F0FF;
+}
+.part-risa li{
+    list-style: none;
+}
+.part-risa a{
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(73deg, #FF52AF 11.6%, #9F53FF 83.86%);
+}
+/*font-style*/
+/*title color*/
+.part-risa h1{
+    font-size: 64px;
+    color: #220953;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.big-f{
+    font-size: 56px;
+}
+/*text color*/
+.part-risa p{
+    color: #4B3E65;
+}
+
+
+/*section4-style*/
+.section4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 165px;
+    gap: 64px;
+}
+.section4 div{
+    margin-top: 32px;
+}
+.section4 a{
+    padding: 16px 28px;
+    border-radius: 64px;
+}
+/*section4の右画像の重なりをどうしようか...*/
+
+/*footer-style*/
+footer{
+    background-color: #1E0849;
+}
+footer p{
+    color: #A197B4;
+}
+footer h2{
+    color: #fff;
+}
+footer>section{
+    display: flex;
+}
+
+/*footer-sec2のリンクの横並べは他サイトを一度参考にしよう*/
