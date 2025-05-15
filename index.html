@@ -3,19 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Yoga</title>
 </head>
 <body>
-    <header>
+    <input type="checkbox" id="night-toggle" hidden>
+    <div class="page-wrapper">
+        <nav>
+            <div class="logo">
+                <span class="gradient-text"><h1 class="h2-font-size">Yoga</h1></span>
+            </div>
 
-    </header>
-    
-    <main>
-
-    </main>
-    
-    <footer>
+            
+            <ul class="nav-links">
+                <li><a>Home</a></li>
+                <li><a>Service1</a></li>
+                <li><a>Service2</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+            
+            <div class="nav-toggle">
+                <label for="night-toggle" class="icon">
+                    <img src="./aseets/icon/night-mode.png" alt="Night Mode Icon" class="light-icon">
+                    <img src="./aseets/icon/light-mode.png" alt="Light Mode Icon" class="dark-icon">
+                </label>
+                <div class="menu-icon">
+                    <img src="./aseets/icon/light-menu.png" alt="Menu Icon" class="light-icon">
+                    <img src="./aseets/icon/dark-menu.png" alt="Menu Icon" class="dark-icon">
+                </div>
+            </div>
+        </nav>
         
-    </footer>
+        <main>
+            <section class="banner">
+                <div class="banner-context">
+                    <div class="banner-grid-container text-content biggest-font-size title-font-color">
+                        <h1 class="g1">Choose Your</h1>
+                        <h1 class="g2">Best <span class="yoga-tag">Yoga</span></h1>
+                        <span class="banner-icon g3">
+                            <img src="./aseets/home-star.svg">
+                        </span>
+                        <h1 class="g4">Teacher</h1>
+                    </div>
+                    
+                    
+                    <div>
+                        <p class="h4-font-size text-font-color">
+                            Calm your mind and body with the best yoga
+                        </p>
+                        <p class="h4-font-size text-font-color">
+                            teachers available, relax your day and stay positive.
+                        </p>
+                    </div>
+                    <span>
+                        <button class="btn">Get Started Fee <img src="./aseets/icon/arrow-right-white.svg"></button>
+                    </span>
+                    <div class="yoga-size title-font-color">
+                        <div>
+                            <h3 class="big-font-size">300+</h3>
+                            <p class="small-font-size">Yoga Class</p>
+                        </div>
+                        <div>
+                            <h3 class="big-font-size">40+</h3>
+                            <p class="small-font-size">Participants</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>
+                        <img src="./aseets/home-yoga.png">
+                    </span>
+                </div>
+            </section>
+
+            <section class="niche">
+                <div>
+                    <h2>#01</h2>
+                    <span><img src="./aseets/niche.png" alt="Niche Image"></span>
+                </div>
+                <div>
+                    <span>
+                        <img src="./aseets/liststar-2.svg">
+                        <p>
+                            Get a list of specific influencers in your<br> 
+                            niche at your fingertips so you can focus<br>
+                            on managing your status.
+                        </p>
+                    </span>
+                </div>
+                <div>
+                    <div class="svg-button">
+                        <svg width="150" height="120" viewBox="0 0 150 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                            <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#FF52AE" />
+                                <stop offset="100%" stop-color="#8B52FF" />
+                            </linearGradient>
+                            </defs>
+                            
+                            <ellipse cx="75" cy="60" rx="65" ry="30"
+                                    stroke="url(#grad1)" stroke-width="2" transform="rotate(-45 75 60)" />
+                            
+                            <ellipse cx="75" cy="60" rx="65" ry="30"
+                                    stroke="url(#grad1)" stroke-width="2" transform="rotate(-30 75 60)" />
+                        </svg>
+
+                        <span class="btn-text">Next →</span>
+                    </div>
+                <div>
+
+                </div>
+            </section>
+
+            <section id="health">
+
+            </section>
+        </main>
+        
+        <footer>
+
+        </footer>
+    </div>
 </body>
 </html>
