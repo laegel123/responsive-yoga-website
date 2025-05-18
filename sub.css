@@ -1,130 +1,347 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-.part-risa{
-    background-color: #F5F0FF;   
-}
-.part-risa li{
-    list-style: none;
-}
-.part-risa a{
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(73deg, #FF52AF 11.6%, #9F53FF 83.86%);
-}
 
 /*font-style*/
-/*title color*/
-.part-risa h1{
-    font-size: 64px;
-    color: #220953;
+html {
     font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    --purple-color: #8B52FF;
+    --pink-color: #FF52AE;
+    --body-color: #F5F0FF;
+    --gradient-color: linear-gradient(to left, var(--purple-color), var(--pink-color));
+
+    --title-color: #220953;
+    --text-color: #4b3d65;
+    --text-color-light: #A197B4;
+
+    --biggest-font-size: 6rem;
+    --bigger-font-size: 4rem;
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
 }
-#big-f{
-    font-size: 56px;
+
+.biggest-font-size {
+    font-size: var(--biggest-font-size);
 }
-/*text color*/
-.part-risa p{
-    color: #4B3E65;
+
+.bigger-font-size {
+    font-size: var(--bigger-font-size);
+}
+
+.big-font-size {
+    font-size: var(--big-font-size);
+}
+
+.h1-font-size {
+    font-size: var(--h1-font-size);
+}
+
+.h2-font-size {
+    font-size: var(--h2-font-size);
+}
+
+.h3-font-size {
+    font-size: var(--h3-font-size);
+}
+
+.h4-font-size {
+    font-size: var(--h4-font-size);
+}
+
+.small-font-size {
+    font-size: var(--small-font-size);
+}
+
+.smaller-font-size {
+    font-size: var(--smaller-font-size);
+}
+
+.title-font-color {
+    color: var(--title-color);
+}
+
+.text-font-color {
+    color: var(--text-color);
+}
+
+.text-light-font-color {
+    color: var(--text-color-light);
 }
 
 
-/*section4-style*/
-.section4{
-    max-height: 672px;
-    display: flex;
-    align-items: center;
+.part-risa {
+    background-color: var(--body-color);
+}
+
+.part-risa li {
+    list-style: none;
+}
+
+.part-risa a {
+    text-decoration: none;
+    color: #fff;
+    background: var(--gradient-color);
+}
+
+
+/*section4-styleここから微調整必要！！！！！！！*/
+.section4 {
+    min-height: 672px;
+    display: grid;
+    grid-template-columns: 460px 580px;
     justify-content: center;
-    padding: 48px 165px;
+    padding: 5vh 11vw;
     gap: 64px;
 }
-.section4 div{
-    margin-top: 32px;
+
+.section4 h1 {
+    margin-bottom: 40px;
 }
-.section4 a{
+
+.sec4-content {
+    align-content: center;
+}
+
+.section4 div {
+    margin-top: 48px;
+    /*section5も同じmargin使ってるからまとめれないか考えよう*/
+}
+
+.section4 a {
     padding: 16px 28px;
     border-radius: 64px;
 }
-/*section4の右画像の重なりをどうしようか...*/
+
+.sec4-img,
+.sec4-img>img {
+    position: relative;
+}
+
+#yoga2-pic {
+    position: absolute;
+    top: 25vh;
+    left: 8vw;
+}
+.horrizontally{
+    background-color: #fff;
+    height: max-content;/*section4 divのmarginのせいでフィットしてないだけよーん*/
+    width: max-content;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns:  max-content max-content;
+} 
+.text-center{
+    align-content: center;
+}
+/*↑section4 divのmarginがかかってるのと、もう少し綺麗にできないか＆位置を画像の横にしたい...*/
+
+
+
+/*重ねれたけど、順番が違うのとコードもっといい書き方があると思うの....*/
 
 /*section5-style*/
-.section5{
-    display: flex;
-    padding: 48px 160px;
+.section5 {
+    padding: 5vh 0;
+    display: grid;
+    grid-template-rows: 462px 368px;
+    /*ここareaで上手くできるかも/tabletのときは1fr?*/
+    position: relative;
     text-align: center;
 }
-.section5 div{
-    margin-top: 32px;
 
+.section5 div {
+    margin-top: 32px;
+    border-radius: 64px;
 }
-.section5 a{
+
+.section5 a {
     border-radius: 64px;
     padding: 20px;
-}/*→下に移動させたい...*/
+}
+
+/*→下に移動させたい...*/
+.sec5-img {
+    position: absolute;
+    top: 0;
+    left: 15%;
+}
+
+.sec5-img img:first-child,
+.sec5-img img:nth-child(3) {
+    float: left;
+    clear: both;
+}
+
+.sec5-img img:nth-child(2),
+.sec5-img img:nth-child(4) {
+    float: right;
+}
 
 /*section6-style*/
-.section6{
-    background: linear-gradient(73deg, #FF52AF 11.6%, #9F53FF 83.86%);
-    margin: 48px 224px;
-    padding: 64px 212px;
+.section6 {
+    margin-top: 5vh;
+    padding: 9vh 15vw;
+    /*tablet版だと横のpaddingもう少し細め*/
+}
+
+.section6>section {
+    background: var(--gradient-color);
+    padding: 7vh 14vw;
     border-radius: 32px;
     text-align: center;
 }
-.section6 h1, .section6 p{
+
+.section6 h1,
+.section6 p {
     color: #fff;
 }
-.section6 h1{
-    white-space: nowrap;
+
+.section6 h1 {
     margin-bottom: 16px;
 }
-form{
+
+/*こいつがちょっと右寄りなので修正！*/
+form {
+    display: grid;
     position: relative;
-    margin-top: 40px;
+    margin-top: 4vh;
+    align-items: center;
+    justify-items: end;
 }
-form>input{
+
+form>input {
     width: 100%;
-    height: 72px;
+    height: 8vh;
     border-radius: 48px;
     border: none;
 }
-#button{
-    background:linear-gradient(73deg, #FF52AF 11.6%, #9F53FF 83.86%);
+
+#button {
+    background: var(--gradient-color);
     position: absolute;
-    width: 165px;
-    height: 56px;
-    top: 8px;
-    right: 8px;
+    width: 11vw;
+    height: 6vh;
     z-index: 2;
 }
 
+/*buttonというかform-secについて、gridじゃないとtablet時に崩れるぞ*/
+
 /*footer-style*/
-footer{
+footer {
     background-color: #1E0849;
-    font-family: "Lora", serif;
-    padding: 64px 160px;
+    padding: 7vh 12vw;
 }
-footer p{
-    color: #A197B4;
+
+footer p {
+    color: var(--text-color-light);
 }
-footer h2{
+
+footer h2 {
     color: #fff;
+    margin-bottom: 4vh;
 }
-#gradient{
-    background: linear-gradient(73deg, #FF52AF 11.6%, #9F53FF 83.86%);
+
+.gradient-text {
+    background: var(--gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-footer>section{
+
+footer>section {
     display: flex;
     justify-content: space-between;
-}
-footer li{
-    display: inline-block;
-    
+
 }
 
-/*footer-sec2のリンクの横並べは他サイトを一度参考にしよう*/
+.contact {
+    display: flex;
+    gap: 72px;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 2vw;
+}
+
+footer hr {
+    margin: 5vh 0;
+}
+
+/*絶対にまとめれるcssがあると思うから整理しよう！！*/
+
+/*Media Queries*/
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width:575px) {
+    html {
+        --biggest-font-size: 2.75rem;
+        --bigger-font-size: 2rem;
+        --big-font-size: 1.75rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --h4-font-size: 0.938rem;
+        --small-font-size: 0.813rem;
+        --smaller-font-size: 0.75rem;
+    }
+
+    .part-risa {
+        text-align: center;
+    }
+
+    .section4 {
+        grid-template-columns: auto;
+    }
+
+    .section4 img {
+        width: 250px;
+        height: 171px;
+    }
+    .sec4-img div img{
+        width: 24px;
+        height: 24px;
+    }
+
+    /*なんでかわかんないけど、他の画像サイズが変えれない...全部ここで設定しなくちゃいけないのかも含めて検索しよう！*/
+    .sec5-img img:first-child,
+    .sec5-img img:nth-child(2) {
+        width: 140px;
+        height: 210px;
+    }
+
+    .sec5-img img:nth-child(3),
+    .sec5-img img:nth-child(4) {
+        width: 230px;
+        height: 118px;
+    }
+
+    .section6{
+        padding: 11vh 5vw;
+    }
+
+    /*footer完璧です！*/
+    footer>section {
+        flex-direction: column;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .foot-sec2 {
+        text-align: center;
+    }
+
+    /*section6の設定。ここは完璧。いじるな*/
+    #button{
+        position: relative;
+        width: 100%;
+    }
+}
