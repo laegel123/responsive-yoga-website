@@ -107,10 +107,10 @@ nav ul li a:hover {
     display: block;
     width: 1.2rem;
     cursor: pointer;
+}
 
-    img {
-        width: 100%;
-    }
+.icon img {
+    width: 100%;
 }
 
 .btn {
@@ -151,15 +151,16 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-
-    p {
-        line-height: 1.3rem;
-    }
-
-    h1 {
-        font-weight: 600;
-    }
 }
+
+.banner-context p {
+    line-height: 1.3rem;
+}
+
+.banner-context h1 {
+    font-weight: 600;
+}
+
 .banner-grid-container {
     display: grid;
     grid-template-areas: 
@@ -167,13 +168,21 @@ nav ul li a:hover {
     "g2 g2 g3"
     "g4 g4 g4"
     ;
-
-    .g1 {grid-area: g1;}
-    .g2 {grid-area: g2;}
-    .g3 {grid-area: g3; display: flex;}
-    .g4 {grid-area: g4;}
-
     align-items: center;
+}
+
+.banner-grid-container .g1 {
+    grid-area: g1;
+}
+.banner-grid-container .g2 {
+    grid-area: g2;
+}
+.banner-grid-container .g3 {
+    grid-area: g3;
+    display: flex;
+}
+.banner-grid-container .g4 {
+    grid-area: g4;
 }
 
 .yoga-tag {
@@ -186,20 +195,21 @@ nav ul li a:hover {
 }
 
 .text-content {
-    h1 {
-        font-size: var(--biggest-font-size);
-        color: var(--title-color);
-        font-weight: 600;
-    }
+
+}
+
+.text-content h1 {
+    font-size: var(--biggest-font-size);
+    color: var(--title-color);
+    font-weight: 600;
 }
 
 .yoga-size {
     display: flex;
     gap: 2rem;
-
-    h3 {
-        font-weight: 400;
-    }
+}
+.yoga-size h3 {
+    font-weight: 400;
 }
 .yoga-size > div {
     display: flex;
@@ -249,17 +259,16 @@ nav ul li a:hover {
     margin: 0 auto;
     padding-top: 5rem;
     gap: 3rem;
-    
-    h2 {
-        font-size: var(--bigger-font-size);
-        color: var(--title-color);
-        font-weight: 500;
-    }
-
-    img {
-        width: 100%;
-    }
 }
+.niche h2 {
+    font-size: var(--bigger-font-size);
+    color: var(--title-color);
+    font-weight: 500;
+}
+.niche img {
+    width: 100%;
+}
+
 .niche > div:first-child {
     display: flex;
     align-items: center;
@@ -270,15 +279,13 @@ nav ul li a:hover {
     font-size: var(--h4-font-size);
     line-height: 1.5rem;
     align-content: center;
-
-    img {
-        width: 100%;
-    }
-
-    p {
-        font-size: var(--h4-font-size);
-        line-height: 1.5rem;
-    }
+}
+.niche > div:nth-child(2) img {
+    width: 100%;
+}
+.niche > div:nth-child(2) p {
+    font-size: var(--h4-font-size);
+    line-height: 1.5rem;
 }
 .niche > div:nth-child(2) > span {
     display: block;
@@ -326,18 +333,16 @@ nav ul li a:hover {
     justify-content: center;
     gap: 2.5rem;
     margin-top: 5rem;
-
-    h2 {
-        font-size: var(--bigger-font-size);
-        color: var(--title-color);
-        font-weight: 300;
-    }
-
-    p {
-        font-size: var(--h4-font-size);
-        color: var(--text-color);
-        line-height: 1.5rem;
-    }
+}
+.health h2 {
+    font-size: var(--bigger-font-size);
+    color: var(--title-color);
+    font-weight: 300;
+}
+.health p {
+    font-size: var(--h4-font-size);
+    color: var(--text-color);
+    line-height: 1.5rem;
 }
 .health-context {
     display: flex;
@@ -390,10 +395,9 @@ nav ul li a:hover {
         display: block;
         width: 19px;
         cursor: pointer;
-
-        img {
-            width: 100%;
-        }
+    }
+    .menu-icon img {
+        width: 100%;
     }
 
     /* banner */
@@ -413,13 +417,21 @@ nav ul li a:hover {
         "g2 g2 g2 g2 g2"
         "g3 g4 g4 g4 g4"
         ;
-
-        .g1 {grid-area: g1;}
-        .g2 {grid-area: g2;}
-        .g3 {grid-area: g3; display: flex; width: 52px;}
-        .g4 {grid-area: g4;}
-
         align-items: center;
+    }
+    .banner-grid-container .g1 {
+        grid-area: g1;
+    }
+    .banner-grid-container .g2 {
+        grid-area: g2;
+    }
+    .banner-grid-container .g3 {
+        grid-area: g3;
+        display: flex;
+        width: 52px;
+    }
+    .banner-grid-container .g4 {
+        grid-area: g4;
     }
     .banner-context > div:nth-child(2) p {
         display: inline;
@@ -441,10 +453,9 @@ nav ul li a:hover {
     }
     .health-context {
         text-align: center;
-
-        p {
-            display: inline;
-        }
+    }
+    .health-context p {
+        display: inline;
     }
 
 
