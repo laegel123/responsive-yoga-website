@@ -16,6 +16,8 @@ html {
     --text-color: #4b3d65;
     --text-color-light: #A197B4;
 
+    --container-color: #ffffff;
+
     --biggest-font-size: 6rem;
     --bigger-font-size: 4rem;
     --big-font-size: 3.5rem;
@@ -66,6 +68,9 @@ html {
 }
 
 
+.page-body-wrapper {
+    background-color: var(--body-color);
+}
 
 nav {
     display: flex;
@@ -74,7 +79,6 @@ nav {
     width: 100vw;
     height: 80px;
     align-items: center;
-    background-color: var(--body-color);
 }
 nav h1 {
     background: var(--gradient-color); 
@@ -107,10 +111,6 @@ nav ul li a:hover {
     img {
         width: 100%;
     }
-}
-
-main {
-    background-color: var(--body-color);
 }
 
 .btn {
@@ -219,11 +219,13 @@ main {
     gap: 1rem;
 }
 
-#night-toggle:checked ~ .page-wrapper {
+#night-toggle:checked ~ .page-body-wrapper {
     --body-color: #14092A;
     --title-color: #D1C0F1;
     --text-color: #A094B8;
     --text-color-light: #A197B4;
+
+    --container-color: #372A51;
 }
 
 .light-icon {
@@ -232,10 +234,10 @@ main {
 .dark-icon {
     display: none;
 }
-#night-toggle:checked ~ .page-wrapper .light-icon {
+#night-toggle:checked ~ .page-body-wrapper .light-icon {
     display: none;
 }
-#night-toggle:checked ~ .page-wrapper .dark-icon {
+#night-toggle:checked ~ .page-body-wrapper .dark-icon {
     display: block;
 }
 
@@ -253,6 +255,10 @@ main {
         color: var(--title-color);
         font-weight: 500;
     }
+
+    img {
+        width: 100%;
+    }
 }
 .niche > div:first-child {
     display: flex;
@@ -265,21 +271,25 @@ main {
     line-height: 1.5rem;
     align-content: center;
 
-    span {
-        display: block;
-        margin-top: 3rem;
-    }
-
     img {
-        margin-top: -40px;
-        margin-left: -20px;
-        position: absolute;
+        width: 100%;
     }
 
     p {
         font-size: var(--h4-font-size);
         line-height: 1.5rem;
     }
+}
+.niche > div:nth-child(2) > span {
+    display: block;
+    margin-top: 3rem;
+}
+.liststar-2 {
+    display: block;
+    width: 64px;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: -20px;
 }
 .niche > div:last-child {
     align-content: center;
@@ -308,6 +318,35 @@ main {
     font-size: var(--h4-font-size);
     z-index: 1;
 }
+
+
+/* health */
+.health {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+
+    h2 {
+        font-size: var(--bigger-font-size);
+        color: var(--title-color);
+        font-weight: 300;
+    }
+
+    p {
+        font-size: var(--h4-font-size);
+        color: var(--text-color);
+        line-height: 1.5rem;
+    }
+}
+.health-context {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
 
 
 
@@ -384,6 +423,28 @@ main {
     }
     .banner-context > div:nth-child(2) p {
         display: inline;
+    }
+
+    /* niche */
+    .niche {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* health */
+    .health {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 80%;
+        align-items: center;
+    }
+    .health-context {
+        text-align: center;
+
+        p {
+            display: inline;
+        }
     }
 
 
