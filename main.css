@@ -286,6 +286,7 @@ nav ul li a:hover {
 .niche > div:nth-child(2) p {
     font-size: var(--h4-font-size);
     line-height: 1.5rem;
+    color: var(--text-color);
 }
 .niche > div:nth-child(2) > span {
     display: block;
