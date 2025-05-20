@@ -462,10 +462,23 @@ html {
 }
 
 .section5 a {
-    border-radius: 64px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gradient-color);
+    color: white;
+    font-size: var(--h4-font-size);
+    font-weight: 500;
+    gap: 0.5rem;
+    text-align: center;
 }
-
+.sec5-text > div {
+    justify-items: center;
+}
 .sec5-img {
     display: grid;
     grid-template-columns: max-content max-content;
